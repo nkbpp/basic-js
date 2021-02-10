@@ -1,0 +1,25 @@
+git config --global user.name
+git config --global user.name "AB" // установка имени
+
+git config --global user.email alexbratchin@gmail.com
+git config --global user.email // установка email
+
+ls //просмотр папок
+
+cd .. // перейти вверх по каталогу
+cd .\basic // перейти в папку
+
+git init //Создание нового репозитория
+
+git status //Определение состояния
+
+git add . //Подготовка всех файлов
+
+git commit -m "Описание изменений" //Коммит(фиксация изменений)
+
+git branch // просмотр веток
+git branch pfr // создание ветки с именем pfr
+git branch -D test // удаление ветки с именем pfr
+
+git checkout pfr // переключиться на ветку pfr
+git checkout -b pfr2 // создать и переключиться на ветку pfr2
