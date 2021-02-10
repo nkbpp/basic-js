@@ -23,3 +23,15 @@ git branch -D test // удаление ветки с именем pfr
 
 git checkout pfr // переключиться на ветку pfr
 git checkout -b pfr2 // создать и переключиться на ветку pfr2
+
+git merge master // слить текущую ветку с веткой мастер
+
+git branch -M main // переименовать текущую ветку в main
+
+git remote add origin https://github.com/nkbpp/basic-js.git // присоединиться к репозиторию на github
+git remote rm origin // удалить 
+
+git push -u origin master // залить ветку master на сервер
+
+git config --global --get http.proxy
+git config --global --get https.proxy // сбросить настройки прокси
