@@ -35,3 +35,6 @@ git push -u origin master // залить ветку master на сервер
 
 git config --global --get http.proxy
 git config --global --get https.proxy // сбросить настройки прокси
+
+git config --global http.proxy http://proxyuser:proxypass@proxyaddress:8080
+git config --global http.proxy http://10.41.255.251:3128 // установить прокси
