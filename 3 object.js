@@ -47,9 +47,7 @@ console.log(A);
 
 // Проверка существования свойства, оператор «in»
 
-let user1 = { name: 'John', age: 30 };
-
-console.log('age' in user1); // user.age === undefined
+console.log('age' in user); // user.age === undefined
 // В большинстве случаев прекрасно сработает сравнение с undefined. Но есть особый случай, когда свойство существует, но содержит значение undefined, и нужно использовать "in".
 
 /* Цикл «for…in» */
