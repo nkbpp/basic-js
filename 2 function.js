@@ -2,25 +2,25 @@
 // Пример объявления функции:
 // Function Declaration (Объявление Функции) - можно использовать во всем скрипте (или блоке кода, если функция объявлена в блоке).
 function showMessage() {
-  alert('Всем привет!');
+  console.log('Всем привет!');
 }
 
 // Function Expression (Функциональное Выражение) - создаётся, когда выполнение доходит до него, и затем уже может использоваться.
 
 let sayHi = function () {
-  alert('Привет');
+  console.log('Привет');
 }; // нужна ; это присвоение
 
 /* Параметры */
 
 function showMessage(from, text) {
   // аргументы: from, text
-  alert(from + ': ' + text);
+  console.log(from + ': ' + text);
 }
 /*  Параметры по умолчанию */
 // Если параметр не указан, то его значением становится undefined.
 function showMessage(from, text = 'текст не добавлен') {
-  alert(from + ': ' + text);
+  console.log(from + ': ' + text);
 }
 
 /* Возврат значения */
@@ -29,22 +29,23 @@ function showMessage(from, text = 'текст не добавлен') {
 
 /*  Функции-«колбэки» */
 // Ключевая идея в том, что мы передаём функцию и ожидаем, что она вызовется обратно (от англ. «call back» – обратный вызов) когда-нибудь позже
-function ask(question, yes, no) {
-  if (confirm(question)) yes();
-  else no();
-}
+/*
+  function ask(question, yes, no) {
+    if (confirm(question)) yes();
+    else no();
+  }
 
-/* ask(
+ ask(
     'Вы согласны?',
     function () {
-        alert('Вы согласились.');
+        console.log('Вы согласились.');
     },
     function () {
-        alert('Вы отменили выполнение.');
+        console.log('Вы отменили выполнение.');
     }
 ); */
 
-/* Функции-стрелки */
+//! Функции-стрелки
 // let func = (arg1, arg2, ...argN) => expression
 // …Такой код создаёт функцию func с аргументами arg1..argN и вычисляет expression с правой стороны с их использованием, возвращая результат.
 // Другими словами, это более короткий вариант такой записи:
@@ -52,7 +53,7 @@ let func = function (arg1, arg2, ...argN) {
   return expression;
 };
 
-/* Многострочные стрелочные функции */
+//! Многострочные стрелочные функции
 let sum = (a, b) => {
   // фигурная скобка, открывающая тело многострочной функции
   let result = a + b;
@@ -61,12 +62,13 @@ let sum = (a, b) => {
 
 // У стрелочных функций нет «this»
 //Стрелочные функции нельзя использовать с new
+//Стрелочные функции не имеют "arguments"
 
 console.log(sum(1, 2)); // 3
 
 console.log(+sum);
 
-/* Функция-конструктор */
+//! Функция-конструктор
 
 // Когда функция вызывается c new, происходит следующее:
 //     Создаётся новый пустой объект, и он присваивается this.
@@ -77,7 +79,7 @@ function User(name) {
   this.name = name;
   this.isAdmin = false;
   this.sayHi = function () {
-    alert('Меня зовут: ' + this.name);
+    console.log('Меня зовут: ' + this.name);
   };
 }
 let user = new User('Вася');

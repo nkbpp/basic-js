@@ -11,6 +11,11 @@ let user = 'John',
 // or
 let a1, b1, c1;
 a1 = b1 = c1 = 2 + 2; //Присваивание по цепочке
+//Деструктурирующее присваивание
+let decarr = ['Ilya', 'Kantor']; // записывает firstName=decarr[0], surname=decarr[1]
+let [firstName, surname] = decarr;
+console.log(firstName); // Ilya
+console.log(surname); // Kantor
 
 let bool = true;
 let firstName = `Александр ${bool}`;
